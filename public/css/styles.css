@@ -1,0 +1,229 @@
+:root {
+    --bg: #f6f7fb;
+    --card: #ffffff;
+    --text: #111827;
+    --muted: #4b5563;
+    --border: #e5e7eb;
+    --btn: #111827;
+    --btnText: #ffffff;
+    --focus: #2563eb;
+  }
+  
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.4;
+  
+    min-height: 100vh;
+
+  }
+  
+  
+  .site-header {
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+    padding: 18px 16px;
+  }
+  
+  .header-row {
+    max-width: 980px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  
+  .site-title {
+    margin: 0;
+    font-size: 32px; /* big title */
+    font-weight: 800;
+  }
+  
+  .container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 18px 16px 40px;
+  }
+  
+  
+  
+  .button-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    width: 100%;
+    max-width: 700px; 
+  }
+  
+  .big-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px;
+    padding: 18px;
+    border-radius: 18px;
+    background: var(--btn);
+    color: var(--btnText);
+    text-decoration: none;
+    font-size: 28px;  /* big text for older people */
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    border: 2px solid transparent;
+  }
+  
+  .big-btn:focus,
+  .big-btn:hover {
+    outline: none;
+    border-color: var(--focus);
+  }
+  
+  .back-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 14px;
+    border-radius: 12px;
+    text-decoration: none;
+    background: #111827;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    border: 2px solid transparent;
+  }
+  
+  .back-btn:focus,
+  .back-btn:hover {
+    outline: none;
+    border-color: var(--focus);
+  }
+  
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 18px;
+  }
+  
+  .card-title {
+    margin: 0 0 6px 0;
+    font-size: 28px;
+    font-weight: 900;
+  }
+  
+  .muted {
+    margin: 0 0 14px 0;
+    font-size: 18px;
+    color: var(--muted);
+    font-weight: 600;
+  }
+  
+  .table-wrap {
+    overflow: auto;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: #fff;
+  }
+  
+  .benefits-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 720px; /* keeps layout nice; wrapper scrolls on phones */
+  }
+  
+  .benefits-table th,
+  .benefits-table td {
+    padding: 14px 14px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+    font-size: 18px;
+  }
+  
+  .benefits-table th {
+    text-align: left;
+    font-size: 18px;
+    font-weight: 900;
+    background: #f3f4f6;
+  }
+  
+  .note {
+    margin: 14px 0 0 0;
+    font-size: 16px;
+    color: var(--muted);
+    font-weight: 600;
+  }
+  
+  @media (max-width: 720px) {
+    .site-title { font-size: 28px; }
+    .big-btn { font-size: 24px; min-height: 110px; }
+  }
+  .section-title {
+    margin: 0 0 8px 0;
+    font-size: 24px;
+    font-weight: 900;
+  }
+  
+  .section-text {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text);
+  }
+  
+  .split-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    align-items: center;
+    margin-bottom: 18px;
+  }
+  
+  .split-section.reverse .split-text { order: 2; }
+  .split-section.reverse .split-media { order: 1; }
+  
+  .img-frame {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+  }
+  
+  .center-section {
+    margin-bottom: 18px;
+  }
+  
+  .center-figure {
+    margin: 0;
+    display: grid;
+    gap: 12px;
+    justify-items: center;
+  }
+  
+  .caption {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--muted);
+    text-align: center;
+    max-width: 70ch;
+  }
+  
+  @media (max-width: 820px) {
+    .split-section {
+      grid-template-columns: 1fr;
+    }
+    .split-section.reverse .split-text,
+    .split-section.reverse .split-media {
+      order: initial;
+    }
+  }
+  .home-center {
+    min-height: calc(100vh - 80px); /* header height approx */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
