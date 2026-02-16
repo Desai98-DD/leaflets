@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Break Form</title>
+  <link rel="stylesheet" href="../../css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-row">
+      <a class="back-btn" href="../../index.html" aria-label="Go back to Home">← Home</a>
+      <h1 class="site-title">Did you get your break?</h1>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card form-card">
+      <p class="form-intro">
+        This form is <strong>not</strong> a complaint form. It is only for sharing information with your union so they
+        can use real numbers and evidence during upcoming bargaining.
+      </p>
+
+      <p class="form-intro muted">
+        Please fill everything below. All fields are required.
+      </p>
+
+      <form id="breakForm" class="form" novalidate>
+        <div class="form-grid">
+          <div class="field">
+            <label for="firstName">First name <span class="req">*</span></label>
+            <input id="firstName" name="firstName" type="text" autocomplete="given-name" required />
+          </div>
+
+          <div class="field">
+            <label for="lastName">Last name <span class="req">*</span></label>
+            <input id="lastName" name="lastName" type="text" autocomplete="family-name" required />
+          </div>
+
+          <div class="field">
+            <label for="storeNumber">Store number <span class="req">*</span></label>
+            <input id="storeNumber" name="storeNumber" type="text" inputmode="numeric" required />
+          </div>
+
+          <div class="field">
+            <label for="date">Date <span class="req">*</span></label>
+            <input id="date" name="date" type="date" required />
+          </div>
+
+          <div class="field full">
+            <label>Which break did you miss? <span class="req">*</span></label>
+            <div class="checks" role="group" aria-label="Break options">
+              <label class="check">
+                <input type="checkbox" name="breaks" value="First 15 min" />
+                <span>First 15 min</span>
+              </label>
+
+              <label class="check">
+                <input type="checkbox" name="breaks" value="30 min" />
+                <span>30 min</span>
+              </label>
+
+              <label class="check">
+                <input type="checkbox" name="breaks" value="Last 15 min" />
+                <span>Last 15 min</span>
+              </label>
+            </div>
+            <p class="hint muted">Select at least one.</p>
+          </div>
+
+          <div class="field full">
+            <label for="description">Description <span class="req">*</span></label>
+            <textarea
+              id="description"
+              name="description"
+              rows="5"
+              placeholder="Example: Staffing was short and I was asked to stay on till..."
+              required
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button class="primary-btn" type="submit">Submit</button>
+          <p id="formError" class="error" aria-live="polite"></p>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="../../js/break.js"></script>
+</body>
+</html>
