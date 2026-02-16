@@ -410,3 +410,50 @@
   background: #fde68a; /* soft yellow */
   color: inherit;
 }
+.course-list {
+  margin-top: 18px;
+  display: grid;
+  gap: 14px;
+}
+
+.line-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 74px;
+
+  padding: 14px 16px;
+  border-radius: 18px;
+
+  background: var(--btn);
+  color: var(--btnText);
+  text-decoration: none;
+
+  font-size: 22px;
+  font-weight: 900;
+  text-align: center;
+
+  border: 2px solid transparent;
+}
+
+.line-btn:hover,
+.line-btn:focus {
+  outline: none;
+  border-color: var(--focus);
+}
+
+@media (max-width: 720px) {
+  .line-btn {
+    font-size: 20px;
+    min-height: 70px;
+  }
+}
+.bullets {
+  margin: 12px 0 0 20px;
+  font-size: 19px;
+  font-weight: 650;
+  color: var(--text);
+}
+.bullets li { margin-bottom: 8px; }
