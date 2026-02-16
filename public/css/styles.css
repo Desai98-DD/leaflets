@@ -345,3 +345,68 @@
   background-color: #fef2f2 !important;
   border-radius: 12px;
 }
+.search-label {
+  display: block;
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.search-input {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px 14px;
+  font-size: 18px;
+  outline: none;
+}
+
+.search-input:focus {
+  border-color: var(--focus);
+}
+
+.search-hint {
+  margin-top: 10px;
+}
+
+.stories-list {
+  margin-top: 18px;
+  display: grid;
+  gap: 14px;
+}
+
+.story-card {
+  padding: 18px;
+}
+
+.story-title {
+  margin: 0 0 12px 0;
+  font-size: 26px;
+  font-weight: 900;
+}
+
+.story-section {
+  margin-top: 12px;
+  display: grid;
+  gap: 6px;
+}
+
+.story-label {
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.story-text {
+  font-size: 19px;
+  font-weight: 650;
+  color: var(--text);
+}
+.hl {
+  padding: 0 3px;
+  border-radius: 6px;
+  background: #fde68a; /* soft yellow */
+  color: inherit;
+}

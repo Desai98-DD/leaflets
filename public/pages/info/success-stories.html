@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Success Stories</title>
+  <link rel="stylesheet" href="../../css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-row">
+      <a class="back-btn" href="../../index.html" aria-label="Go back to Home">← Home</a>
+      <h1 class="site-title">Success Stories</h1>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <label class="search-label" for="storySearch">Search stories</label>
+      <input
+        id="storySearch"
+        class="search-input"
+        type="search"
+        placeholder="Search by title, description, or solution..."
+        autocomplete="off"
+      />
+      <p class="muted search-hint" id="resultCount">Showing 0 stories</p>
+    </section>
+
+    <section id="storiesList" class="stories-list" aria-label="Stories list"></section>
+
+    <section id="noResults" class="card" style="display:none;">
+      <h2 class="card-title">No results</h2>
+      <p class="section-text">Try a different keyword.</p>
+    </section>
+  </main>
+
+  <script src="../../js/success-stories.js"></script>
+</body>
+</html>
